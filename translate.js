@@ -1,9 +1,9 @@
-
+п»ї
 
 let inputNumber = 13256;
 
 let numbersName = ['one', 'two', 'three', 'fore', 'five', 'sex', 'seven', 'eigh', 'nine'];
-let numbersName1 = ['eleven', ' twelve', 'thirteen', 'fourteen', 'fifteen', 'sexteen', 'seventeen', 'eighteen', 'nineteen']; // десятки
+let numbersName1 = ['eleven', ' twelve', 'thirteen', 'fourteen', 'fifteen', 'sexteen', 'seventeen', 'eighteen', 'nineteen']; // РґРµСЃСЏС‚РєРё
 let numbersName2 = ['', 'twenty', ' theerty', 'forty', 'fifty', 'sexty', 'seventy', 'eighty', 'ninety']; // 
 
 let outputNumber;
@@ -31,35 +31,35 @@ for (let i = inputNumber.toString().length; i > 0; i--) {
 }
 
 
-// на вході завжди число xxxxxx
+// if xxxxxx
 function getNameNumber6(number) {
     let firstPart = parseInt(number.toString().substring(0, 4));
     let secondPart = parseInt(number.toString().substring(4, number.toString().length));
     return getNameNumber3(firstPart) + ' thausenthousand ' + getNameNumber3(secondPart);
 }
 
-// на вході завжди число xxxxx
+// if xxxxx
 function getNameNumber5(number) {
     let firstPart = parseInt(number.toString().substring(0, 3));
     let secondPart = parseInt(number.toString().substring(3, number.toString().length));
     return getNameNumber2(firstPart) + ' thausenthousand ' + getNameNumber3(secondPart);
 }
 
-// на вході завжди число xxxx 
+//if xxxx 
 function getNameNumber4(number) {
     let firstPart = parseInt(number.toString().substring(0, 2));
     let secondPart = parseInt(number.toString().substring(2, number.toString().length));
     return getNameNumber(firstPart) + ' thausenthousand ' + getNameNumber3(secondPart);
 }
 
-// на вході завжди число xxx 
+// if xxx 
 function getNameNumber3(number) {
     let firstPart = parseInt(number.toString()[0]);
     let secondPart = parseInt(number.toString().substring(1, number.toString().length));
     return numbersName[firstPart] + ' hundred ' + getNameNumber2(secondPart);
 }
 
-// на вході завжди число xx
+// if xx
 function getNameNumber2(number) {
     let firstPart = parseInt(number.toString()[0]);
     let secondPart = parseInt(number.toString().shift());
@@ -71,7 +71,7 @@ function getNameNumber2(number) {
     }
 }
 
-// на вході завжди число x
+// if x
 function getNameNumber1(numb) {
     return numb == 0 ? '' : numbersName[numb];
 }
